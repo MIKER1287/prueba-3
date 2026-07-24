@@ -265,3 +265,9 @@ def salir():
 if __name__ == '__main__':
     iniciar_base_datos()
     app.run(debug=True)
+    import os
+
+if __name__ == '__main__':
+    iniciar_base_datos()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
